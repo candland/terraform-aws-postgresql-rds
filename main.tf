@@ -74,6 +74,7 @@ resource "aws_db_instance" "postgresql" {
   storage_encrypted          = "${var.storage_encrypted}"
   monitoring_interval        = "${var.monitoring_interval}"
   monitoring_role_arn        = "${aws_iam_role.enhanced_monitoring.arn}"
+  publicly_accessible        = "${var.publicly_accessible}"
 
   tags {
     Name        = "DatabaseServer"
